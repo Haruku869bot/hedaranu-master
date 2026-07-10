@@ -1,0 +1,1041 @@
+/* =====================================
+   ヘダラヌマスター
+   style.css
+===================================== */
+
+:root{
+
+    --bg:#050505;
+    --green:#00ff88;
+    --green2:#00cc66;
+    --white:#ffffff;
+    --red:#ff4444;
+
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+
+    margin:0;
+
+    background:var(--bg);
+
+    color:var(--green);
+
+    font-family:
+    "Consolas",
+    "Yu Gothic UI",
+    sans-serif;
+
+    overflow:hidden;
+
+}
+
+/* ===================== */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+.screen{
+
+    width:100vw;
+    height:100vh;
+
+}
+
+/* =====================
+タイトル
+===================== */
+
+#titleScreen{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.gameTitle{
+
+    font-size:64px;
+
+    text-shadow:
+    0 0 8px var(--green),
+    0 0 18px var(--green);
+
+    margin-bottom:10px;
+
+}
+
+.subTitle{
+
+    color:#88ffbb;
+
+    margin-bottom:60px;
+
+}
+
+.menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.menu button{
+
+    width:260px;
+
+    height:60px;
+
+}
+
+/* =====================
+ボタン
+===================== */
+
+button{
+
+    background:black;
+
+    color:var(--green);
+
+    border:2px solid var(--green);
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+button:hover{
+
+    background:var(--green);
+
+    color:black;
+
+    box-shadow:
+        0 0 15px var(--green);
+
+    transform:scale(1.05);
+
+}
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+/* ===================== */
+
+.footer{
+
+    position:absolute;
+
+    bottom:20px;
+
+    text-align:center;
+
+}
+
+#highScore{
+
+    font-size:22px;
+
+}
+
+#version{
+
+    margin-top:8px;
+
+    color:#66cc88;
+
+}
+
+/* =====================
+ゲーム画面
+===================== */
+
+#gameScreen{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ---------- */
+
+.gameHeader{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:20px 40px;
+
+    font-size:28px;
+
+}
+
+/* ---------- */
+
+#statusArea{
+
+    text-align:right;
+
+}
+
+#levelArea{
+
+    margin-top:10px;
+
+}
+
+/* ---------- */
+#modeArea{
+
+    margin-top:10px;
+
+    font-size:18px;
+
+    color:#88ffbb;
+
+}
+
+.gameField{
+
+    flex:1;
+
+    position:relative;
+
+}
+
+/* ---------- */
+
+#question{
+
+    position:absolute;
+
+    top:60px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:52px;
+
+    text-shadow:
+        0 0 15px var(--green);
+
+    transition:
+        opacity .2s,
+        transform .2s;
+
+}
+/* ---------- */
+
+#effectArea{
+
+    position:absolute;
+
+    left:50%;
+
+    top:45%;
+
+    transform:translate(-50%,-50%);
+
+    pointer-events:none;
+
+    font-size:64px;
+
+    font-weight:bold;
+
+    color:gold;
+
+    text-shadow:
+        0 0 15px gold;
+
+}
+
+#deadline{
+
+    position:absolute;
+
+    bottom:150px;
+
+    width:100%;
+
+    height:4px;
+
+    background:var(--green);
+
+    box-shadow:
+    0 0 15px var(--green);
+
+}
+
+/* ---------- */
+
+#inputArea{
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:50px;
+
+}
+
+/* ---------- */
+
+#playerInput{
+
+    min-width:260px;
+
+    min-height:60px;
+
+    text-align:center;
+
+    letter-spacing:12px;
+
+    font-size:46px;
+
+}
+
+.gameFooter{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin-bottom:40px;
+
+}
+
+.gameFooter button{
+
+    width:130px;
+
+    height:70px;
+
+}
+
+/* =====================
+GAME OVER
+===================== */
+
+#gameOverScreen{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+#gameOverScreen h1{
+
+    font-size:72px;
+
+    color:var(--red);
+
+    text-shadow:
+    0 0 20px red;
+
+}
+
+#finalLevel{
+
+    margin-bottom:20px;
+
+    font-size:26px;
+
+}
+
+#finalScore{
+
+    margin:30px;
+
+    font-size:32px;
+
+}
+
+#newHighScore{
+
+    color:gold;
+
+    margin-bottom:30px;
+
+    animation:blink .6s infinite;
+
+}
+
+/* =====================
+PAUSE
+===================== */
+
+#pauseScreen{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* =====================
+LIST
+===================== */
+
+#listScreen{
+
+    padding:40px;
+
+    overflow:auto;
+
+}
+
+/* =====================
+CRT風
+===================== */
+
+#morsePlayer{
+
+    margin-top:30px;
+
+    text-align:center;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+repeating-linear-gradient(
+
+    transparent 0px,
+    transparent 2px,
+
+    rgba(255,255,255,.03) 3px,
+    rgba(255,255,255,.03) 4px
+
+);
+
+}
+
+/* ===================== */
+
+@keyframes blink{
+
+    50%{
+
+        opacity:.3;
+
+    }
+
+}
+@keyframes levelUp{
+
+    0%{
+
+        transform:
+        translate(-50%,-50%)
+        scale(.3);
+
+        opacity:0;
+
+    }
+
+    30%{
+
+        transform:
+        translate(-50%,-50%)
+        scale(1.3);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+        translate(-50%,-50%)
+        scale(1);
+
+        opacity:0;
+
+    }
+
+}
+
+.levelUp{
+
+    animation:
+        levelUp
+        1s forwards;
+
+}
+/* ==========================
+   信号→文字入力ボタン
+========================== */
+
+#kanaButtons{
+
+    position:absolute;
+
+    left:60px;
+
+    top:150px;
+
+    display:grid;
+
+    grid-template-columns:repeat(5,60px);
+
+    gap:8px;
+
+    z-index:10;
+
+}
+
+#kanaButtons.hidden{
+
+    display:none;
+
+}
+
+.kanaButton{
+
+    width:60px;
+
+    height:60px;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:#ffffff;
+
+    color:#222;
+
+    transition:.15s;
+
+}
+
+.kanaButton:hover{
+
+    transform:scale(1.05);
+
+    background:#ffe066;
+
+}
+
+.kanaButton:active{
+
+    transform:scale(.95);
+
+}
+
+/*=========================
+ 演出
+=========================*/
+
+.effect{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:56px;
+
+    font-weight:bold;
+
+    pointer-events:none;
+
+    animation:effectAnim .8s forwards;
+
+}
+
+.correct{
+
+    color:#ffe600;
+
+}
+
+.miss{
+
+    color:#ff5555;
+
+}
+
+.levelup{
+
+    color:#00ff88;
+
+}
+
+@keyframes effectAnim{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+        translate(-50%,-50%)
+        scale(.3);
+
+    }
+
+    25%{
+
+        opacity:1;
+
+        transform:
+        translate(-50%,-50%)
+        scale(1.2);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+        translate(-50%,-120%)
+        scale(1);
+
+    }
+
+}
+/*=========================
+ EXP
+=========================*/
+
+#expArea{
+
+    margin-top:10px;
+
+}
+
+#expBar{
+
+    width:180px;
+
+    height:14px;
+
+    border:2px solid #fff;
+
+    margin-top:5px;
+
+}
+
+#expGauge{
+
+    width:0%;
+
+    height:100%;
+
+    background:#00ff88;
+
+    transition:.3s;
+
+}
+/*=========================
+ SETTING
+=========================*/
+
+#settingScreen{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+#settingContainer{
+
+    width:520px;
+
+    max-width:90%;
+
+    padding:30px;
+
+    border:2px solid var(--green);
+
+    border-radius:15px;
+
+    background:rgba(0,255,136,.05);
+
+    box-shadow:0 0 20px rgba(0,255,136,.25);
+
+}
+
+.settingGroup{
+
+    margin-bottom:35px;
+
+}
+
+.settingGroup h2{
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+    color:var(--green);
+
+}
+
+.settingGroup label{
+
+    display:block;
+
+    font-size:26px;
+
+    margin:12px 0;
+
+    cursor:pointer;
+
+}
+
+.settingGroup input{
+
+    transform:scale(1.5);
+
+    margin-right:15px;
+
+}
+
+#settingBackBtn{
+
+    margin-top:40px;
+
+    width:220px;
+
+    height:65px;
+
+    font-size:28px;
+
+}
+
+/*=========================
+ 音量スライダー
+=========================*/
+
+#volumeSlider{
+
+    width:220px;
+
+    display:block;
+
+    margin:20px auto 10px;
+
+}
+
+#volumeValue{
+
+    display:block;
+
+    margin-top:10px;
+
+    font-size:24px;
+
+    text-align:center;
+
+}
+
+/*=========================
+ 学習モード
+=========================*/
+
+#studyScreen{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+#studyKana{
+
+    font-size:110px;
+
+    margin:20px;
+
+}
+
+#studyCode{
+
+    font-size:46px;
+
+    letter-spacing:10px;
+
+}
+
+#studyHint{
+
+    margin:25px;
+
+    font-size:28px;
+
+    color:#cccccc;
+
+}
+
+.studyButtons{
+
+    display:flex;
+
+    gap:20px;
+
+    margin:30px;
+
+}
+
+#studyGroup{
+
+    width:220px;
+
+    height:45px;
+
+    font-size:22px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+}
+
+/*==========================
+  木構造
+==========================*/
+
+#treeArea{
+
+    position:absolute;
+
+    top:20px;
+
+    right:30px;
+
+    width:950px;
+
+    height:980px;
+
+    overflow:visible;
+
+    transform:scale(1.25);
+
+    transform-origin:top right;
+
+    pointer-events:none;
+
+}
+
+/* ノード */
+
+.treeNode{
+
+    cursor:pointer;
+
+    transition:
+
+        transform .2s,
+
+        color .2s;
+
+}
+
+.treeNode:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* ● */
+
+/* 通過 */
+
+.treeNode.active .treeDot{
+
+    background:#00ff66;
+
+    box-shadow:
+
+        0 0 10px #00ff66,
+
+        0 0 25px #00ff66;
+
+}
+
+.treeNode.active{
+
+    color:#00ff88;
+
+}
+
+/* 現在位置 */
+
+.treeNode.current .treeDot{
+
+    background:#ffd400;
+
+    border-color:#ffd400;
+
+    transform:scale(1.45);
+
+    box-shadow:
+
+        0 0 15px #ffd400,
+
+        0 0 30px #ffd400;
+
+}
+.treeNode.active{
+
+    background:#00ff88;
+
+    color:#001b13;
+
+    box-shadow:
+        0 0 10px #00ff88,
+        0 0 20px #00ff88;
+
+    font-weight:bold;
+
+}
+
+.treeNode.current{
+
+    border:3px solid #ffff00;
+
+    box-shadow:
+        0 0 15px yellow,
+        0 0 30px yellow;
+
+    transform:scale(1.2);
+
+    transition:.2s;
+
+}
+
+.treeNode.active circle{
+
+    fill:#00ff66;
+
+    filter:
+
+        drop-shadow(
+
+            0 0 8px #00ff66
+
+        );
+
+}
+
+.treeNode.current circle{
+
+    fill:yellow;
+
+    stroke:yellow;
+
+    filter:
+
+        drop-shadow(
+
+            0 0 12px yellow
+
+        );
+
+}
+
+.treeNode.active text{
+
+    fill:#00ff66;
+
+}
+
+.treeNode.current text{
+
+    fill:yellow;
+
+    font-weight:bold;
+
+}
+
+#treeSvg{
+
+    width:100%;
+
+    height:100%;
+
+    overflow:visible;
+
+}
+
+.treeCircle{
+
+    transition:.2s;
+
+}
+
+.treeLabel{
+
+    font-size:16px;
+
+    dominant-baseline:middle;
+
+}
