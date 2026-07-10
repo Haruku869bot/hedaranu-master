@@ -1039,3 +1039,7 @@ repeating-linear-gradient(
     dominant-baseline:middle;
 
 }
+
+#treeArea{
+    display:none;
+}
