@@ -1051,3 +1051,43 @@ repeating-linear-gradient(
 #treeArea{
     display:none;
 }
+
+#titleGuide{
+
+    position:absolute;
+
+    left:80px;
+
+    top:170px;
+
+    width:340px;
+
+    padding:20px;
+
+    border:2px solid var(--green);
+
+    border-radius:12px;
+
+    background:rgba(0,255,136,.05);
+
+    color:var(--green);
+
+    line-height:2;
+
+}
+
+#titleGuide h2{
+
+    margin-top:0;
+
+    font-size:32px;
+
+}
+
+#titleGuide p{
+
+    margin:8px 0;
+
+    font-size:22px;
+
+}
