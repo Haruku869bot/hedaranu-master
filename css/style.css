@@ -278,7 +278,7 @@ button:active{
 
     position:absolute;
 
-    bottom:150px;
+    bottom:10px;
 
     width:100%;
 
@@ -295,7 +295,7 @@ button:active{
 
 #inputArea{
 
-    height:80px;
+    height:20px;
 
     display:flex;
 
@@ -519,15 +519,15 @@ repeating-linear-gradient(
 
     position:absolute;
 
-    left:60px;
+    left:40px;
 
-    top:150px;
+    top:120px;
 
     display:grid;
 
-    grid-template-columns:repeat(5,60px);
+    grid-template-columns:repeat(5,52px);
 
-    gap:8px;
+    gap:6px;
 
     z-index:10;
 
@@ -541,17 +541,17 @@ repeating-linear-gradient(
 
 .kanaButton{
 
-    width:60px;
+    width:52px;
 
-    height:60px;
+    height:52px;
 
-    font-size:22px;
+    font-size:20px;
 
     font-weight:bold;
 
     border:none;
 
-    border-radius:8px;
+    border-radius:6px;
 
     cursor:pointer;
 
